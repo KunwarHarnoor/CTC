@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@font-face {
+    font-family: 'CustomFont2';
+    src: url('/fonts/Fontspring-DEMO-LuloCleanOutlineBold.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'tahu';
+    src: url('/fonts/Tahu!.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+
+.space-grotesk {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--body-font);
+    overflow-x: hidden;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* header */
+h1, h2, h3, p {
+    margin: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /*===== LAYOUT =====*/
+  .bd-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 7vh;
+  }
+
+  .head{
+    height: 7vh;
+  }
+  
+  .l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: var(--z-modal);
+    transition: background-color 0.3s ease-in-out;
+    padding: 0.8rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 0 20px black;
+  }
+  
+  /* Navbar */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    position: relative;
+  }
+  
+  .nav__img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .nav__menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav__item {
+    margin-left: 2rem;
+  }
+  
+  .nav__link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav__item:hover{
+    color: #0396A6;
+    transition: 0.5s all;
+  }
+  
+  .nav__link.scrolled {
+    color: var(--highlight-color); /* Change to your desired color */
+  }
+  
+  .nav__toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav__menu {
+      position: fixed;
+      left: 0;
+      top: -100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 100%;
+      height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      transition: top 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .nav__item {
+      margin-bottom: 2rem;
+    }
+  
+    .nav__toggle {
+      display: block;
+    }
+  
+    .show {
+      top: 0;
+    }
+  }
+  
+  .l-header.scrolled {
+    background-color:white;
+    box-shadow: 0 0 20px black;
+  }
+  
+
+
+.home{
+    height: auto;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+}
+
+.home-container{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: auto;
+    margin: 0 0 0 0;
+}
+
+.home-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color:#064f57;
+    box-shadow: 0 0 20px black;
+}
+
+.home-text h1{
+    font-family: 'tahu';
+    font-size: 6.5rem;
+    color: white;
+}
+
+
+.home-name h1{
+    font-family: 'tahu';
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    box-shadow: 0 0 50px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* form */
+form {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    background-color:white;
+  }
+
+  input{
+    border-radius: 10px;
+    padding: 5px;
+    border: 0;
+  }
+  
+  input::placeholder {
+    color: grey; /* Change this to your desired color */
+    
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    height: 40px;
+  }
+  
+  textarea {
+    height: 80px;
+    color: black;
+  }
+  
+  textarea::placeholder{
+    color: grey;
+  }
+  
+  select {
+    height: 40px;
+    color: black;
+  }
+  
+  .submitBtn{
+    background-color:#005377;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+ /* footer */
+
+
+ .footer{
+    height: 130vh;
+    background-color: black;
+  }
+  
+  .footer .companyName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+    /* font-family: "Playfair Display", serif; */
+  }
+  
+  .footer .companyName h1{
+    font-size: 7rem;
+    padding-top: 20rem;
+    color: rgb(116, 207, 223);
+    font-family: 'CustomFont2', sans-serif;
+  }
+  
+  .upper-section{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .upper-section a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .lower-section{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    height: 20vh;
+    background-color:white;
+  }
+  
+  .col1 li a:hover{
+    color: rgb(116, 207, 223);
+    transition: 0.2s all;
+  }
+  
+  .col4 li a:hover{
+    color: rgb(116, 207, 223);
+    transition: 0.2s all;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .home-text-form p{
+    color: white;
+  }
+
+
+
